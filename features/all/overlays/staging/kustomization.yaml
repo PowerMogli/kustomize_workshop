@@ -1,0 +1,21 @@
+resources:
+  - ../../base
+
+patchesStrategicMerge:
+  - replica_count.yaml
+
+namePrefix: staging-
+
+nameSuffix: "-1"
+
+images:
+  - name: nginx
+    newName: ubuntu
+    newTag: "22.04"
+
+vars:
+  - name: MY_SERVICE_NAME
+    objref:
+      kind: Service
+      name: my-nginx
+      apiVersion: v1

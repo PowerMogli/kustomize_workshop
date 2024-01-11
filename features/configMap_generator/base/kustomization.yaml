@@ -1,0 +1,6 @@
+resources:
+  - deployment.yaml
+configMapGenerator:
+  - name: hello-config
+    files:
+      - hello.config

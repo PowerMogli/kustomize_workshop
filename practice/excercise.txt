@@ -1,0 +1,4 @@
+1) Passe die Anzahl der Replicas in Production an auf 7
+2) Ergänze für alle Resourcen den Namespace auf einen beliebigen Wert
+3) Erstelle eine ConfigMap nur für Staging mit einem beliebigen Inhalt
+4) Erstelle für Production einen NamePrefix "prod-"

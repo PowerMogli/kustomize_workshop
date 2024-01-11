@@ -1,0 +1,29 @@
+resources:
+  - deployment.yaml
+  - service.yaml
+commonAnnotations:
+  eks.amazonaws.com/role-arn: "arn:aws:iam::XXXXXXXXXXXX:role/Admin"
+commonLabels:
+  owner: nerdware GmbH
+  email: albert.slupianek@nerdware.dev
+configMapGenerator:
+  - name: hello-config
+    files:
+      - hello.config
+secretGenerator:
+  - name: password-secret
+    files:
+      - password.txt
+# secretGenerator:
+#   - name: example-secret-2
+#     literals:
+#       - username=admin
+#       - password=secret
+namespace: feature-app
+
+# generatorOptions:
+#   disableNameSuffixHash: true
+#   labels:
+#     type: generated
+#   annotations:
+#     note: generated

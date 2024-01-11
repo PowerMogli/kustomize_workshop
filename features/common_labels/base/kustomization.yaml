@@ -1,0 +1,5 @@
+resources:
+  - deployment.yaml
+commonLabels:
+  owner: nerdware GmbH
+  email: albert.slupianek@nerdware.dev

@@ -1,0 +1,4 @@
+resources:
+  - deployment.yaml
+commonAnnotations:
+  eks.amazonaws.com/role-arn: "arn:aws:iam::XXXXXXXXXXXX:role/Admin"
